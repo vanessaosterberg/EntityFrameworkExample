@@ -10,30 +10,30 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-<table class="table">
+<table class="table" id="barrelInventory">
     <thread>
         <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConstructionMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Radius)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+        </tr>
     </thread>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ConstructionMaterial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Radius)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Height)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CurrentLocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Contents)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateCreated)
-        </th>
-    </tr>
 
     @foreach (var item in Model)
     {
@@ -105,9 +105,13 @@
             }
 
         };
+
+        $(document).ready(function () {
+            $('#barrelInventory').DataTable({
+                "pagingtype": "simple"
+            });
+            $('.dataTables_length').addClass('bs-select');
+        });
     </script>
-
-
-
 
 }
