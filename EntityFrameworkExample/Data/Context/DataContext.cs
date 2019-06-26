@@ -21,7 +21,10 @@ namespace EntityFrameworkExample.Data.Context
             base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(new BarrelConfiguration());
             
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new BoxConfiguration());
         }
         public DbSet<Barrel> Barrels { get; set; }
+        public DbSet<Box> Boxes { get; set; }
     }
 }
