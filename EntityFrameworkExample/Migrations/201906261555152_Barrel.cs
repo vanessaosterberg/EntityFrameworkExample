@@ -22,6 +22,16 @@ namespace EntityFrameworkExample.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Boxes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Width = c.Double(nullable: false),
+                        Height = c.Double(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.ExampleEntities",
                 c => new
                     {
@@ -51,6 +61,7 @@ namespace EntityFrameworkExample.Migrations
             DropIndex("dbo.ExampleChildEntities", new[] { "ParentEntityId" });
             DropTable("dbo.ExampleChildEntities");
             DropTable("dbo.ExampleEntities");
+            DropTable("dbo.Boxes");
             DropTable("dbo.Barrels");
         }
     }

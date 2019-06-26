@@ -137,13 +137,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906260144327_Barrel.cs" />
-    <Compile Include="Migrations\201906260144327_Barrel.Designer.cs">
-      <DependentUpon>201906260144327_Barrel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906261315478_Box.cs" />
-    <Compile Include="Migrations\201906261315478_Box.Designer.cs">
-      <DependentUpon>201906261315478_Box.cs</DependentUpon>
+    <Compile Include="Migrations\201906261555152_Barrel.cs" />
+    <Compile Include="Migrations\201906261555152_Barrel.Designer.cs">
+      <DependentUpon>201906261555152_Barrel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Barrel.cs" />
@@ -157,6 +153,8 @@
     <Compile Include="Service\BoxService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext.mdf" />
+    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext_log.ldf" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -198,7 +196,9 @@
     <Content Include="Views\Box\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201906261555152_Barrel.resx">
+      <DependentUpon>201906261555152_Barrel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -212,16 +212,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906260144327_Barrel.resx">
-      <DependentUpon>201906260144327_Barrel.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906261315478_Box.resx">
-      <DependentUpon>201906261315478_Box.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
