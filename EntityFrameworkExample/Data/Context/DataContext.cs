@@ -19,8 +19,12 @@ namespace EntityFrameworkExample.Data.Context
             modelBuilder.Configurations.Add(new ExampleEntityConfiguration());
             modelBuilder.Configurations.Add(new ExampleChildEntityConfiguration());
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new BarrelConfiguration());
+            
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(new BoxConfiguration());
         }
+        public DbSet<Barrel> Barrels { get; set; }
         public DbSet<Box> Boxes { get; set; }
     }
 }
