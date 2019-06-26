@@ -2,46 +2,44 @@
 @{
     ViewBag.Title = "Delete";
 }
-
-<h2>Delete</h2>
-
-<h3>Delete Barrel</h3>
-
+<center>
+    <h2 class="secondaryColor">DELETE</h2>
+</center>
 <div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ConstructionMaterial)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ConstructionMaterial)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Radius)
+            @Html.LabelFor(model => model.Radius, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Radius)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Height)
+            @Html.LabelFor(model => model.Height, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Height)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CurrentLocation)
+            @Html.Label("Construction Material", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.CurrentLocation)
+            @Html.DisplayFor(model => model.ConstructionMaterial)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Contents)
+            @Html.LabelFor(model => model.Contents, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Contents)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DateCreated)
+            @Html.Label("Current Location", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentLocation)
+        </dd>
+        <dt>
+            @Html.Label("Date Created", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
         </dt>
         <dd>
             @Html.DisplayFor(model => model.DateCreated)
@@ -52,7 +50,6 @@
         @Html.AntiForgeryToken()
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" />
-            @Html.ActionLink("Back to List", "Index")
         </div>
     }
 </div>
