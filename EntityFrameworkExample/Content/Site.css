@@ -22,3 +22,65 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.primaryColor {
+    color: white;
+}
+
+.secondaryColor {
+    color: silver;
+}
+
+.thirdColor {
+    color: #c3a68a;
+}
+
+h2 {
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    padding-top: 1.5%;
+}
+
+h4 {
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+th {
+    color: #c3a68a;
+    font-weight: bold;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+}
+.createLabel{
+    font-size:medium;
+    color:black;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+.backgroundPrimary{
+    background-color: white;
+}
+.navbar{
+    padding: .5%;
+    margin-bottom: 2%;
+}
+
+.navHeader {
+    font-size: x-large;
+    text-align: center;
+}
+
+.navHeader:hover{
+    color:black!important;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+
