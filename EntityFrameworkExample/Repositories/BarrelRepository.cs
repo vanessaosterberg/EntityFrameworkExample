@@ -9,7 +9,7 @@ namespace EntityFrameworkExample.Repositories
 {
     public class BarrelRepository
     {
-        private DataContext dbContext;
+        public DataContext dbContext;
 
         public BarrelRepository()
         {

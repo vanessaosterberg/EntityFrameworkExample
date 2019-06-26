@@ -9,7 +9,7 @@ namespace EntityFrameworkExample.Service
 {
     public class BarrelService
     {
-        private BarrelRepository repository;
+        public BarrelRepository repository;
 
         public BarrelService()
         {
