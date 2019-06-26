@@ -58,7 +58,7 @@ th {
 
 div.ellipsis {
     white-space: nowrap;
-    width: 100px;
+    width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -72,14 +72,15 @@ div.ellipsis {
 .backgroundPrimary{
     background-color: white;
 }
-.navbar{
-    padding: .5%;
-    margin-bottom: 2%;
+.navbar {
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border: #F3F3F3;
+    padding:13px;
 }
 
 .navHeader {
     font-size: x-large;
-    text-align: center;
 }
 
 .navHeader:hover{
@@ -93,6 +94,10 @@ div.ellipsis {
 
 .navbar .navbar-collapse {
     text-align: center;
+}
+
+.navbar-right {
+    float: right;
 }
 
 .searchInput {
