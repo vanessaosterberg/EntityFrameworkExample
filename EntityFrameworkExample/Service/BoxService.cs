@@ -9,7 +9,7 @@ namespace EntityFrameworkExample.Service
 {
     public class BoxService
     {
-        public BoxRepository repository;
+        private BoxRepository repository;
 
         public BoxService()
         {

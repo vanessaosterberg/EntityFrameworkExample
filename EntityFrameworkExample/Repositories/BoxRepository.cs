@@ -9,7 +9,7 @@ namespace EntityFrameworkExample.Repositories
 {
     public class BoxRepository
     {
-        public DataContext dbContext;
+        private DataContext dbContext;
 
         public BoxRepository()
         {
