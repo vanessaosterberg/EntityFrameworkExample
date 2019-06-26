@@ -28,7 +28,7 @@ textarea {
 }
 
 .secondaryColor {
-    color: #8a8a8a;
+    color: silver;
 }
 
 .thirdColor {
@@ -36,16 +36,29 @@ textarea {
 }
 
 h2 {
-    font-family: 'Lucida Sans';
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
 }
 
 h4 {
-    font-family: 'Lucida Sans';
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 th {
     color: #c3a68a;
     font-weight: bold;
-    font-family: 'Lucida Sans';
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
+}
+.createLabel{
+    font-size:medium;
+    color:black;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+.backgroundPrimary{
+    background-color: white;
+}
+.navbar{
+
 }
