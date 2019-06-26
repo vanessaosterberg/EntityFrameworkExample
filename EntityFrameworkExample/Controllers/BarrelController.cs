@@ -63,7 +63,6 @@ namespace EntityFrameworkExample.Controllers
         {
             if (ModelState.IsValid)
             {
-                barrel.DateCreated = (DateTime)barrel.DateCreated;
                 service.SaveEdits(barrel);
                 return RedirectToAction("Index");
             }
