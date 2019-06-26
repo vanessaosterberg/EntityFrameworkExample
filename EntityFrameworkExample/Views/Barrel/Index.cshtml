@@ -10,25 +10,54 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Radius)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Height)
-        </th>
-        <th></th>
-    </tr>
+<table class="table" id="barrelInventory">
+    <thread>
+        <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConstructionMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Radius)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+        </tr>
+    </thread>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ConstructionMaterial)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Radius)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
             </td>
             <td>
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
@@ -37,3 +66,52 @@
     }
 
 </table>
+@section scripts{
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".clickable-row").click(function () {
+                window.location = $(this).data("href");
+            });
+        });
+        function searchTable() {
+            var input, filter, found, table, tr, td, i, j;
+            input = document.getElementById("searchBar");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            trArray = document.getElementsByTagName("tr");
+            for (i = 1; i < trArray.length; i++) {
+                td = trArray[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    if (!($('#mySwitch').is(":checked")) && !($(trArray[i]).hasClass('deleted'))) {
+                        trArray[i].style.display = "";
+                        found = false;
+                    } else if ($('#mySwitch').is(":checked")) {
+                        trArray[i].style.display = "";
+                        found = false;
+                    }
+
+                } else {
+                    trArray[i].style.display = "none";
+                }
+
+            }
+
+        };
+
+        $(document).ready(function () {
+            $('#barrelInventory').DataTable({
+                "pagingtype": "simple"
+            });
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+
+}

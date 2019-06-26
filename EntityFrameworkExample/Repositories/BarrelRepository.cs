@@ -26,5 +26,25 @@ namespace EntityFrameworkExample.Repositories
             dbContext.Barrels.Add(toAdd);
             dbContext.SaveChanges();
         }
+
+        public Barrel GetBarrelById(int id)
+        {
+            return dbContext.Barrels.Find(id);
+        }
+
+        public void SaveEdits(Barrel toSave)
+        {
+            dbContext.Entry(toSave).State = System.Data.Entity.EntityState.Modified;
+            dbContext.SaveChanges();
+        }
+
+        public void DeleteBarrel(Barrel toDelete)
+        {
+            dbContext.Barrels.Remove(toDelete);
+            dbContext.SaveChanges();
+        }
+
+
+
     }
 }
