@@ -13,19 +13,19 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.ConstructionMaterial)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Radius)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Height)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ConstructionMaterial)
+            @Html.DisplayNameFor(model => model.CurrentLocation)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Contents)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CurrentLocation)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateCreated)
@@ -37,10 +37,22 @@
     {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ConstructionMaterial)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Radius)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
             </td>
             <td>
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
