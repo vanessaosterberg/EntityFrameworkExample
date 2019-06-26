@@ -53,6 +53,14 @@ th {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
+
+td.ellipsis {
+    white-space: nowrap;
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .createLabel{
     font-size:medium;
     color:black;
@@ -84,5 +92,4 @@ th {
 .navbar .navbar-collapse {
     text-align: center;
 }
-
 
