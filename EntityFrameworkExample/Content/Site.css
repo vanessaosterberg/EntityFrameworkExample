@@ -22,3 +22,30 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.primaryColor {
+    color: white;
+}
+
+.secondaryColor {
+    color: #8a8a8a;
+}
+
+.thirdColor {
+    color: #c3a68a;
+}
+
+h2 {
+    font-family: 'Lucida Sans';
+}
+
+h4 {
+    font-family: 'Lucida Sans';
+}
+
+th {
+    color: #c3a68a;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    font-size: large;
+}
