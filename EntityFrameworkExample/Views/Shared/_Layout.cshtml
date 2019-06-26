@@ -10,19 +10,15 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top backgroundPrimary">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img src="~/Pictures/latest.png" width="10%" height="10%"/>
-                @Html.ActionLink("CODE THE BARREL", "Index", "Barrel", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                </ul>
+            <div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @Html.ActionLink("CODE THE BARREL", "Index", "Barrel", new { area = "" }, new { @class = " navHeader navbar-brand " })
+                            <img src="~/Pictures/latest.png" width="40" height="40"/>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

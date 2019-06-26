@@ -38,6 +38,7 @@ textarea {
 h2 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
+    padding-top: 1.5%;
 }
 
 h4 {
@@ -60,5 +61,26 @@ th {
     background-color: white;
 }
 .navbar{
-
+    padding: .5%;
+    margin-bottom: 2%;
 }
+
+.navHeader {
+    font-size: x-large;
+    text-align: center;
+}
+
+.navHeader:hover{
+    color:black!important;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+
