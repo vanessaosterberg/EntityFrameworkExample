@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<EntityFrameworkExample.Models.Barrel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inventory";
 }
-
-<h2>Index</h2>
-
+    <center>
+        <h2 class="secondaryColor">INVENTORY</h2>
+    </center>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -15,7 +15,7 @@
         <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ConstructionMaterial)
+                @Html.Label("Construction Material")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Radius)
@@ -24,13 +24,13 @@
                 @Html.DisplayNameFor(model => model.Height)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CurrentLocation)
+                @Html.Label("Current Location")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Contents)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
+                @Html.Label("Date Created")
             </th>
         </tr>
     </thread>
