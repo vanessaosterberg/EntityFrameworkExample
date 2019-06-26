@@ -196,6 +196,8 @@
     <Content Include="Views\Barrel\Create.cshtml" />
     <Content Include="Views\Box\Index.cshtml" />
     <Content Include="Views\Box\Create.cshtml" />
+    <Content Include="Views\Barrel\Edit.cshtml" />
+    <Content Include="Views\Barrel\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
