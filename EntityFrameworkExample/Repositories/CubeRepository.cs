@@ -7,44 +7,42 @@ using System.Web;
 
 namespace EntityFrameworkExample.Repositories
 {
-    public class BarrelRepository
+    public class CubeRepository
     {
         private DataContext dbContext;
 
-        public BarrelRepository()
+        public CubeRepository()
         {
             dbContext = new DataContext();
         }
 
-        public List<Barrel> GetAllBarrels()
+        public List<Cube> GetAllCubes()
         {
-            return dbContext.Barrels.ToList();
+            return dbContext.Cubes.ToList();
         }
 
-        public void AddBarrel(Barrel toAdd)
+        public Cube GetCubeById(int id)
         {
-            dbContext.Barrels.Add(toAdd);
+            return dbContext.Cubes.Find(id);
+        }
+
+        public void AddCube(Cube toAdd)
+        {
+            dbContext.Cubes.Add(toAdd);
             dbContext.SaveChanges();
         }
 
-        public Barrel GetBarrelById(int id)
-        {
-            return dbContext.Barrels.Find(id);
-        }
-
-        public void SaveEdits(Barrel toSave)
+        public void SaveEdits(Cube toSave)
         {
             dbContext.Entry(toSave).State = System.Data.Entity.EntityState.Modified;
             dbContext.SaveChanges();
         }
 
-        public void DeleteBarrel(Barrel toDelete)
+        public void DeleteCube(Cube toDelete)
         {
-            dbContext.Barrels.Remove(toDelete);
+            dbContext.Cubes.Remove(toDelete);
             dbContext.SaveChanges();
         }
-
-
 
     }
 }
