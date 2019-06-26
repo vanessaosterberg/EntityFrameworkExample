@@ -1,21 +1,21 @@
 ﻿@model IEnumerable<EntityFrameworkExample.Models.Barrel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inventory";
 }
-
-<h2>Index</h2>
-
+    <center>
+        <h2 class="secondaryColor">INVENTORY</h2>
+    </center>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button type="button" class="btn btn-light">@Html.ActionLink("Create New", "Create")</button>
 </p>
 
 <table class="table" id="barrelInventory">
     <thread>
-        <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
+       
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ConstructionMaterial)
+                @Html.Label("Construction Material")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Radius)
@@ -24,13 +24,16 @@
                 @Html.DisplayNameFor(model => model.Height)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CurrentLocation)
+                @Html.Label("Current Location")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Contents)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
+                @Html.Label("Date Created")
+            </th>
+            <th>
+                <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
             </th>
         </tr>
     </thread>
@@ -57,10 +60,8 @@
                 @Html.DisplayFor(modelItem => item.DateCreated)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                <button type="button" class="btn">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                <button type="button" class="btn">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
             </td>
         </tr>
     }
