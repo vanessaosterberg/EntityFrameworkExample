@@ -4,10 +4,10 @@
     ViewBag.Title = "Inventory";
 }
     <center>
-        <h2 class="secondaryColor">INVENTORY</h2>
+        <h2 class="secondaryColor">BARREL INVENTORY</h2>
     </center>
 <p>
-    <button type="button" class="btn btn-light">@Html.ActionLink("Create New", "Create")</button>
+    <button type="button" class="linkButton">@Html.ActionLink("Create New", "Create")</button>
 </p>
 
 <table class="table" id="barrelInventory">
@@ -53,15 +53,20 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CurrentLocation)
             </td>
-            <td class="ellipsis">
-                @Html.DisplayFor(modelItem => item.Contents)
+
+            <td>
+                <div class="ellipsis">
+                    @Html.DisplayFor(modelItem => item.Contents)
+                </div>
             </td>
+
+
             <td>
                 @Html.DisplayFor(modelItem => item.DateCreated)
             </td>
             <td>
-                <button type="button" class="btn">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
-                <button type="button" class="btn">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                <button type="button" class="linkButton">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                <button type="button" class="linkButton">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
             </td>
         </tr>
     }

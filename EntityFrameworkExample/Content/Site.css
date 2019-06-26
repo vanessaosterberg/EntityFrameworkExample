@@ -38,24 +38,27 @@ textarea {
 h2 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
-    padding-top: 1.5%;
-    font-size: x-large;
+    padding-top: 5.5%;
+    padding-bottom: 3.5%;
+    font-size: xx-large;
 }
 
 h4 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
 th {
+    background-color: #F3F3F3;
     color: #c3a68a;
     font-weight: bold;
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
 
-td.ellipsis {
+div.ellipsis {
     white-space: nowrap;
-    width: 50px;
+    width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -92,3 +95,29 @@ td.ellipsis {
     text-align: center;
 }
 
+.searchInput {
+    float: right;
+    box-shadow: none;
+    height: 30px;
+    color: black;
+    text-indent: 10px;
+    font-size: 14px;
+    border-radius: 18px;
+    outline: none;
+    border-style: none;
+    border-color:black;
+}
+
+.linkButton {
+    background-color: #F3F3F3;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
