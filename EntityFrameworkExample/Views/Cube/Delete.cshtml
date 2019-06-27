@@ -1,7 +1,96 @@
-﻿
+﻿@model EntityFrameworkExample.Models.Cube
+
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<center>
+    <h2 class="secondaryColor">DELETE</h2>
+</center>
+<div>
+    <h4>Are you sure you'd like to delete this cube?</h4>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-5">
+              
+                <div class="row" style="padding-bottom:10px">
+                    <div class="formGroup">
+                        <div class="col-sm-3">
+                            @Html.LabelFor(model => model.SideLength, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                        </div>
+                        <div class="col-sm-9">
+                            @Html.DisplayFor(model => model.SideLength)
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom:10px">
+                    <div class="formGroup">
+                        <div class="col-sm-3">
+                            @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                        </div>
+                        <div class="col-sm-9">
+                            @Html.DisplayFor(model => model.Weight)
+                        </div>
+                    </div>
+                </div>
+                <div class="row"style="padding-bottom:10px">
+                    <div class="formGroup">
+                        <div class="col-sm-3">
+                            @Html.Label("Construction Material", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                        </div>
+                        <div class="col-sm-9">
+                            @Html.DisplayFor(model => model.ConstructionMaterial)
+                        </div>
+                    </div>
+                </div>
+                <div class="row"style="padding-bottom:10px">
+                    <div class="formGroup">
+                        <div class="col-sm-3">
+                            @Html.Label("Current Location", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                        </div>
+                        <div class="col-sm-9">
+                            @Html.DisplayFor(model => model.CurrentLocation)
+                        </div>
+                    </div>
+                </div>
+                <div class="row"style="padding-bottom:10px">
+                    <div class="formGroup">
+                        <div class="col-sm-3">
+                            @Html.Label("Date Created", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                        </div>
+                        <div class="col-sm-9">
+                            @Html.DisplayFor(model => model.DateCreated)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row"style="padding-bottom:10px">
+                    <div class="formGroup">
+                        <div class="col-sm-3">
+                            @Html.LabelFor(model => model.Contents, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                        </div>
+                        <div class="col-sm-9">
+                            @Html.DisplayFor(model => model.Contents)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-9">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-actions no-color">
+                        <button type="button" class="linkButton">@Html.ActionLink("Cancel", "Index")</button>
+                        <input type="submit" value="Delete" class="majorActionButton" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 
+
+</div>
