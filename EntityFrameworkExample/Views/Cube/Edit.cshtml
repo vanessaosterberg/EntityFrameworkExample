@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Edit";
 }
+
 <center>
     <h2 class="secondaryColor">EDIT CUBE</h2>
 </center>
@@ -71,10 +72,22 @@
                                 @Html.LabelFor(model => model.Contents, htmlAttributes: new { @class = "textLabel col-md-2 " })
                             </div>
                             <div class="col-md-9">
-                                @Html.EditorFor(model => model.Contents, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.TextAreaFor(model => model.Contents, new {
+                               cols = "50",
+                               rows = "10",
+                               @tabindex = "0",
+                               @class = "inputBox",
+                               @align = "left",
+                               @autofocus = "true",
+                               @minlength = "5",
+                               htmlAttributes = new {@class= "inputBox"}
+                           })
                                 @Html.ValidationMessageFor(model => model.Contents, "", new { @class = "text-danger" })
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+
                     </div>
                 </div>
             </div>
