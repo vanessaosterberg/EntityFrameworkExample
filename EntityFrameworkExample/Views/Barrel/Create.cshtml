@@ -64,7 +64,16 @@
                                 @Html.LabelFor(model => model.Contents, htmlAttributes: new { @class = "control-label col-md-2 createLabel" })
                             </div>
                             <div class="col-md-9">
-                                @Html.TextAreaFor(model => model.Contents, new { htmlAttributes = new { @class = "resizer" } })
+                                @Html.TextAreaFor(model => model.Contents, new {
+                               cols = "50",
+                               rows = "10",
+                               @class = "inputBox",
+                               @tabindex = "0",
+                               @align = "left",
+                               @autofocus = "true",
+                               @minlength = "5",
+                               htmlAttributes = new {@class= "inputBox"}
+                           })
                                 @Html.ValidationMessageFor(model => model.Contents, "", new { @class = "text-danger" })
                             </div>
                         </div>
