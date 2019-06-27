@@ -136,6 +136,20 @@ div.ellipsis {
     border-radius: 8px;
 }
 
+.majorActionButton {
+    background-color: #c3a68a;
+    border: none;
+    color: #F3F3F3;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
 .paginationButton {
     background-color: #F3F3F3;
     border: none;
