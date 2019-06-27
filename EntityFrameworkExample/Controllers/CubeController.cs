@@ -15,9 +15,56 @@ namespace EntityFrameworkExample.Controllers
         public CubeService service = new CubeService();
 
         // GET: Cube
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(service.GetAllCubes());
+            ViewBag.ConstructionMaterialSortParm = String.IsNullOrEmpty(sortOrder) ? "mat_desc" : ""; 
+            ViewBag.RadiusSortParm = sortOrder == "Rad" ? "rad_desc" : "Rad"; 
+            ViewBag.HeightSortParm = sortOrder == "Hit" ? "hit_desc" : "Hit"; 
+            ViewBag.ContentsSortParm = sortOrder == "Con" ? "con_desc" : "Con"; 
+            ViewBag.CurrentLocationSortParm = sortOrder == "Loc" ? "loc_desc" : "Loc";  
+            ViewBag.DateCreatedSortParm = sortOrder == "Date" ? "date_desc" : "date";
+            var barrels = from s in service.GetAllCubes()
+                          select s;
+            switch (sortOrder)
+            {
+                case "mat_desc":
+                    barrels = barrels.OrderByDescending(s => s.ConstructionMaterial);
+                    break;
+                case "Loc":
+                    barrels = barrels.OrderBy(s => s.CurrentLocation);
+                    break;
+                case "loc_desc":
+                    barrels = barrels.OrderByDescending(s => s.CurrentLocation);
+                    break;
+                case "Hit":
+                    barrels = barrels.OrderBy(s => s.Weight);
+                    break;
+                case "hit_desc":
+                    barrels = barrels.OrderByDescending(s => s.Weight);
+                    break;
+                case "Rad":
+                    barrels = barrels.OrderBy(s => s.SideLength);
+                    break;
+                case "rad_desc":
+                    barrels = barrels.OrderByDescending(s => s.SideLength);
+                    break;
+                case "Con":
+                    barrels = barrels.OrderBy(s => s.Contents);
+                    break;
+                case "con_desc":
+                    barrels = barrels.OrderByDescending(s => s.Contents);
+                    break;
+                case "Date":
+                    barrels = barrels.OrderBy(s => s.DateCreated.TimeOfDay);
+                    break;
+                case "date_desc":
+                    barrels = barrels.OrderByDescending(s => s.DateCreated.TimeOfDay);
+                    break;
+                default:
+                    barrels = barrels.OrderBy(s => s.ConstructionMaterial);
+                    break;
+            }
+            return View(barrels.ToList());
         }
 
 
