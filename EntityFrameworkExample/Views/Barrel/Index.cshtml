@@ -7,7 +7,7 @@
     <h2 class="secondaryColor">BARREL INVENTORY</h2>
 </center>
 <p>
-    <button type="button" class="linkButton">@Html.ActionLink("Add Barrel", "Create")</button>
+    <button type="button" class="linkButton">@Html.ActionLink("Add Barrel", "Create", null, new { @class = "thirdColor" })</button>
 </p>
 
 <table class="table" id="barrelInventory">
@@ -15,22 +15,22 @@
 
         <tr>
             <th>
-                @Html.ActionLink("Construction Material", "Index", new { sortOrder = ViewBag.ConstructionMaterialSortParm })
+                @Html.ActionLink("Construction Material", "Index", new { sortOrder = ViewBag.ConstructionMaterialSortParm }, new { @class = "thirdColor" })
             </th>
             <th>
-                @Html.ActionLink("Radius", "Index", new { sortOrder = ViewBag.RadiusSortParm})
+                @Html.ActionLink("Radius", "Index", new { sortOrder = ViewBag.RadiusSortParm}, new { @class = "thirdColor" })
             </th>
             <th>
-                @Html.ActionLink("Height", "Index", new { sortOrder = ViewBag.HeightSortParm})
+                @Html.ActionLink("Height", "Index", new { sortOrder = ViewBag.HeightSortParm}, new { @class = "thirdColor" })
             </th>
             <th>
-                @Html.ActionLink("Current Location", "Index", new { sortOrder = ViewBag.CurrentLocationSortParm })
+                @Html.ActionLink("Current Location", "Index", new { sortOrder = ViewBag.CurrentLocationSortParm }, new { @class = "thirdColor" })
             </th>
             <th>
-                @Html.ActionLink("Contents", "Index", new { sortOrder = ViewBag.ContentsSortParm})
+                @Html.ActionLink("Contents", "Index", new { sortOrder = ViewBag.ContentsSortParm}, new { @class = "thirdColor" })
             </th>
             <th>
-                @Html.ActionLink("Date Created", "Index", new { sortOrder = ViewBag.DateCreatedSortParm})
+                @Html.ActionLink("Date Created", "Index", new { sortOrder = ViewBag.DateCreatedSortParm}, new { @class = "thirdColor" })
             </th>
             <th>
                 <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
@@ -65,8 +65,8 @@
                 @Html.DisplayFor(modelItem => item.DateCreated)
             </td>
             <td>
-                <button type="button" class="linkButton">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
-                <button type="button" class="linkButton">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                <button type="button" class="linkButton">@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "thirdColor" })</button>
+                <button type="button" class="linkButton">@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "thirdColor" })</button>
             </td>
         </tr>
     }
