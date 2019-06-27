@@ -23,6 +23,21 @@ textarea {
     max-width: 280px;
 }
 
+.searchInput {
+    float: right;
+    box-shadow: none;
+    height: 30px;
+    color: black;
+    text-indent: 10px;
+    font-size: 14px;
+    border-radius: 18px;
+    outline: none;
+    border-style: none;
+    border-color: black;
+}
+
+
+/*Colors*/
 .primaryColor {
     color: white;
 }
@@ -35,23 +50,36 @@ textarea {
     color: #c3a68a;
 }
 
+/*Heading Style*/
+
 h2 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
-    padding-top: 1.5%;
-    font-size: x-large;
+    padding-top: 5.5%;
+    padding-bottom: 3.5%;
+    font-size: xx-large;
 }
 
 h4 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/*Table Style*/
 th {
+    background-color: #F3F3F3;
     color: #c3a68a;
     font-weight: bold;
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
+
+div.ellipsis {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .createLabel{
     font-size:medium;
     color:black;
@@ -61,14 +89,17 @@ th {
 .backgroundPrimary{
     background-color: white;
 }
-.navbar{
-    padding: .5%;
-    margin-bottom: 2%;
+
+/*Nav Bar*/
+.navbar {
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border: #F3F3F3;
+    padding:13px;
 }
 
 .navHeader {
     font-size: x-large;
-    text-align: center;
 }
 
 .navHeader:hover{
@@ -84,3 +115,65 @@ th {
     text-align: center;
 }
 
+.navbar-right {
+    float: right;
+}
+
+
+/*Buttons*/
+
+.linkButton {
+    background-color: #F3F3F3;
+    border: none;
+    color: #c3a68a;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.majorActionButton {
+    background-color: #c3a68a;
+    border: none;
+    color: #F3F3F3;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.paginationButton {
+    background-color: #F3F3F3;
+    border: none;
+    color: #c3a68a;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.active {
+    background-color: #c3a68a;
+    border: none;
+    color: #F3F3F3;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}

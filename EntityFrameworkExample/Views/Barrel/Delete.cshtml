@@ -6,50 +6,76 @@
     <h2 class="secondaryColor">DELETE</h2>
 </center>
 <div>
+    <h4>Are you sure you'd like to delete this barrel?</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.LabelFor(model => model.Radius, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Radius)
-        </dd>
-        <dt>
-            @Html.LabelFor(model => model.Height, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Height)
-        </dd>
-        <dt>
-            @Html.Label("Construction Material", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ConstructionMaterial)
-        </dd>
-        <dt>
-            @Html.LabelFor(model => model.Contents, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Contents)
-        </dd>
-        <dt>
-            @Html.Label("Current Location", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CurrentLocation)
-        </dd>
-        <dt>
-            @Html.Label("Date Created", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateCreated)
-        </dd>
-    </dl>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-5">
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Radius, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.Radius)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Height, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.Height)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.Label("Construction Material", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.ConstructionMaterial)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.Label("Current Location", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.CurrentLocation)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.Label("Date Created", htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.DateCreated)
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Contents, htmlAttributes: new { @class = "control-label col-md-4 createLabel" })
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.Contents)
+                    </div>
+                </div>
+            </div>
         </div>
-    }
+        <div class="row">
+            <div class="col-sm-offset-9">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                <div class="form-actions no-color">
+                    <button type="button" class="linkButton">@Html.ActionLink("Cancel", "Index")</button>
+                    <input type="submit" value="Delete" class="majorActionButton" />
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
 </div>

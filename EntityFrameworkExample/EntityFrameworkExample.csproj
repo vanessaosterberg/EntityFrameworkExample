@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BarrelController.cs" />
     <Compile Include="Controllers\BoxController.cs" />
+    <Compile Include="Controllers\CubeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Configurations\BarrelConfiguration.cs" />
     <Compile Include="Data\Configurations\BoxConfiguration.cs" />
@@ -158,9 +159,11 @@
     <Compile Include="Models\ExampleEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BarrelRepository.cs" />
+    <Compile Include="Repositories\CubeRepository.cs" />
     <Compile Include="Service\BarrelService.cs" />
     <Compile Include="Repositories\BoxRepository.cs" />
     <Compile Include="Service\BoxService.cs" />
+    <Compile Include="Service\CubeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext.mdf" />
@@ -207,6 +210,10 @@
     <Content Include="Views\Box\Create.cshtml" />
     <Content Include="Views\Barrel\Edit.cshtml" />
     <Content Include="Views\Barrel\Delete.cshtml" />
+    <Content Include="Views\Cube\Index.cshtml" />
+    <Content Include="Views\Cube\Create.cshtml" />
+    <Content Include="Views\Cube\Edit.cshtml" />
+    <Content Include="Views\Cube\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
