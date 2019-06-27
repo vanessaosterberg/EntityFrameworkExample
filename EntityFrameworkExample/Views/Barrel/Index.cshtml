@@ -15,22 +15,22 @@
 
         <tr>
             <th>
-                @Html.Label("Construction Material")
+                @Html.ActionLink("Construction Material", "Index", new { sortOrder = ViewBag.ConstructionMaterialSortParm })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Radius)
+                @Html.ActionLink("Radius", "Index", new { sortOrder = ViewBag.RadiusSortParm})
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Height)
+                @Html.ActionLink("Height", "Index", new { sortOrder = ViewBag.HeightSortParm})
             </th>
             <th>
-                @Html.Label("Current Location")
+                @Html.ActionLink("Current Location", "Index", new { sortOrder = ViewBag.CurrentLocationSortParm })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Contents)
+                @Html.ActionLink("Contents", "Index", new { sortOrder = ViewBag.ContentsSortParm})
             </th>
             <th>
-                @Html.Label("Date Created")
+                @Html.ActionLink("Date Created", "Index", new { sortOrder = ViewBag.DateCreatedSortParm})
             </th>
             <th>
                 <input class="searchInput" id='searchBar' onkeyup='searchTable()' type='text' placeholder="Search..." />
