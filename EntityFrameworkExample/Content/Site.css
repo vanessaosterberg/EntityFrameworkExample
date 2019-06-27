@@ -63,6 +63,13 @@ h2 {
 h4 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.textLabel {
+    color: #c3a68a;
+    font-weight: bold;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+    padding-right: 30px;
+}
 
 /*Table Style*/
 th {
