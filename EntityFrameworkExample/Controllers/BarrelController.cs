@@ -12,11 +12,58 @@ namespace EntityFrameworkExample.Controllers
     public class BarrelController : Controller
     {
         public BarrelService service = new BarrelService();
-        
+
         // GET: Barrel
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(service.GetAllBarrels());
+            ViewBag.ConstructionMaterialSortParm = String.IsNullOrEmpty(sortOrder) ? "mat_desc" : ""; //done
+            ViewBag.RadiusSortParm = sortOrder == "Rad" ? "rad_desc" : "Rad"; //done
+            ViewBag.HeightSortParm = sortOrder == "Hit" ? "hit_desc" : "Hit";  //done
+            ViewBag.ContentsSortParm = sortOrder == "Con" ? "con_desc" : "Con"; //done
+            ViewBag.CurrentLocationSortParm = sortOrder == "Loc" ? "loc_desc" : "Loc"; //done 
+            ViewBag.DateCreatedSortParm = sortOrder == "Date" ? "date_desc" : "date";
+            var barrels = from s in service.GetAllBarrels()
+                          select s;
+            switch (sortOrder)
+            {
+                case "mat_desc":
+                    barrels = barrels.OrderByDescending(s => s.ConstructionMaterial);
+                    break;
+                case "Loc":
+                    barrels = barrels.OrderBy(s => s.CurrentLocation);
+                    break;
+                case "loc_desc":
+                    barrels = barrels.OrderByDescending(s => s.CurrentLocation);
+                    break;
+                case "Hit":
+                    barrels = barrels.OrderBy(s => s.Height);
+                    break;
+                case "hit_desc":
+                    barrels = barrels.OrderByDescending(s => s.Height);
+                    break;
+                case "Rad":
+                    barrels = barrels.OrderBy(s => s.Radius);
+                    break;
+                case "rad_desc":
+                    barrels = barrels.OrderByDescending(s => s.Radius);
+                    break;
+                case "Con":
+                    barrels = barrels.OrderBy(s => s.Contents);
+                    break;
+                case "con_desc":
+                    barrels = barrels.OrderByDescending(s => s.Contents);
+                    break;
+                case "Date":
+                    barrels = barrels.OrderBy(s => s.DateCreated.TimeOfDay);
+                    break;
+                case "date_desc":
+                    barrels = barrels.OrderByDescending(s => s.DateCreated.TimeOfDay);
+                    break;
+                default:
+                    barrels = barrels.OrderBy(s => s.ConstructionMaterial);
+                    break;
+            }
+            return View(barrels.ToList());
         }
 
         // GET: Barrel/Create/5
@@ -36,7 +83,7 @@ namespace EntityFrameworkExample.Controllers
                 return RedirectToAction("Index");
             }
             return View(toAdd);
-            
+
         }
 
         // GET: Barrel/Edit/5
