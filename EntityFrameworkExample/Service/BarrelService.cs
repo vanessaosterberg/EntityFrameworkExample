@@ -41,5 +41,10 @@ namespace EntityFrameworkExample.Service
             repository.DeleteBarrel(toDelete);
         }
 
+        public int TotalNumberOfBarrels()
+        {
+            return repository.GetAllBarrels().Count;
+        }
+
     }
 }

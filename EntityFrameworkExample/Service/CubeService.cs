@@ -40,5 +40,10 @@ namespace EntityFrameworkExample.Service
         {
             repository.DeleteCube(toDelete);
         }
+
+        public int TotalNumberOfCubes()
+        {
+            return repository.GetAllCubes().Count;
+        }
     }
 }
