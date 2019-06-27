@@ -7,7 +7,7 @@
     <h2 class="secondaryColor">BARREL INVENTORY</h2>
 </center>
 <p>
-    <button type="button" class="linkButton">@Html.ActionLink("Add Barrel", "Create")</button>
+    <button type="button" class="linkButton">@Html.ActionLink("Add Barrel", "Create", null, new { @class = "thirdColor" })</button>
 </p>
 
 <table class="table" id="barrelInventory">
@@ -65,8 +65,8 @@
                 @Html.DisplayFor(modelItem => item.DateCreated)
             </td>
             <td>
-                <button type="button" class="linkButton">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
-                <button type="button" class="linkButton">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                <button type="button" class="linkButton">@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "thirdColor" })</button>
+                <button type="button" class="linkButton">@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "thirdColor" })</button>
             </td>
         </tr>
     }
