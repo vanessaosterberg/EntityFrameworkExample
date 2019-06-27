@@ -173,10 +173,10 @@
                 ** it will creates each button and sets the onclick attribute
                 ** to the "sort" function with a special ($p) number..
                 */
-                $buttons = "<input type='button' class='linkButton' value='&lt;&lt; Prev' onclick='sort(" + ($cur - 1) + ")' " + $prevDis + ">";
+                $buttons = "<input type='button' class='paginationButton' value='&lt;&lt; Prev' onclick='sort(" + ($cur - 1) + ")' " + $prevDis + ">";
             for ($i = 1; $i <= $pCount; $i++)
-                $buttons += "<input type='button' class='linkButton' id='id" + $i + "'value='" + $i + "' onclick='sort(" + $i + ")'>";
-            $buttons += "<input type='button' class='linkButton' value='Next &gt;&gt;' onclick='sort(" + ($cur + 1) + ")' " + $nextDis + ">";
+                $buttons += "<input type='button' class='paginationButton' id='id" + $i + "'value='" + $i + "' onclick='sort(" + $i + ")'>";
+            $buttons += "<input type='button' class='paginationButton' value='Next &gt;&gt;' onclick='sort(" + ($cur + 1) + ")' " + $nextDis + ">";
             return $buttons;
         }
     </script>

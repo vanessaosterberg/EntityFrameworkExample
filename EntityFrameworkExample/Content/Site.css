@@ -23,6 +23,21 @@ textarea {
     max-width: 280px;
 }
 
+.searchInput {
+    float: right;
+    box-shadow: none;
+    height: 30px;
+    color: black;
+    text-indent: 10px;
+    font-size: 14px;
+    border-radius: 18px;
+    outline: none;
+    border-style: none;
+    border-color: black;
+}
+
+
+/*Colors*/
 .primaryColor {
     color: white;
 }
@@ -34,6 +49,8 @@ textarea {
 .thirdColor {
     color: #c3a68a;
 }
+
+/*Heading Style*/
 
 h2 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -47,7 +64,7 @@ h4 {
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
+/*Table Style*/
 th {
     background-color: #F3F3F3;
     color: #c3a68a;
@@ -72,6 +89,8 @@ div.ellipsis {
 .backgroundPrimary{
     background-color: white;
 }
+
+/*Nav Bar*/
 .navbar {
     overflow: hidden;
     background-color: #F3F3F3;
@@ -100,23 +119,13 @@ div.ellipsis {
     float: right;
 }
 
-.searchInput {
-    float: right;
-    box-shadow: none;
-    height: 30px;
-    color: black;
-    text-indent: 10px;
-    font-size: 14px;
-    border-radius: 18px;
-    outline: none;
-    border-style: none;
-    border-color:black;
-}
+
+/*Buttons*/
 
 .linkButton {
     background-color: #F3F3F3;
     border: none;
-    color: black;
+    color: #c3a68a;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -127,31 +136,30 @@ div.ellipsis {
     border-radius: 8px;
 }
 
-    .linkButton:active {
-        background-color: #c3a68a;
-        color: #fff;
-    }
-
-
-
-input[type="button"] {
-    transition: all .3s;
-    border: 1px solid #ddd;
-    padding: 8px 16px;
+.paginationButton {
+    background-color: #F3F3F3;
+    border: none;
+    color: #c3a68a;
+    padding: 10px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 5px;
+    display: inline-block;
     font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
-
-    input[type="button"]:not(.active) {
-        background-color: transparent;
-    }
 
 .active {
     background-color: #c3a68a;
-    color: #fff;
-}
-
-input[type="button"]:hover:not(.active) {
-    background-color: #ddd;
+    border: none;
+    color: #F3F3F3;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
